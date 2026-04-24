@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SINAG | Scholars' Insights and News Articles Group</title>
+    <meta name="description"
+        content="The official publication of Polytechnic University of the Philippines - Cabiao Campus. Providing insights and news for the academic community.">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="nav container">
+            <div class="header-top">
+                <div class="logo-group">
+                    <img src="Assets/SINAG LOGO.png" alt="SINAG Logo" class="sinag-logo">
+                    <div class="brand-info">
+                        <h1>Scholars' Insights and News Articles Group</h1>
+                        <span>Polytechnic University of the Philippines - Cabiao Campus</span>
+                    </div>
+                    <img src="Assets/PUP LOGO.png" alt="PUP Logo" class="pup-logo">
+                </div>
+            </div>
+
+            <div class="header-bottom">
+                <ul class="nav-links">
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#news">Articles</a></li>
+                    <li><a href="#">Editorial</a></li>
+                    <li><a href="javascript:void(0)" onclick="openAllPhotosModal()">Gallery</a></li>
+                    <li><a href="#">Literary</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+
+                <!-- Auth buttons removed as per user request -->
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content animate-up">
+                    <span>Official Publication</span>
+                    <h2>Light of Knowledge, Spark of Truth.</h2>
+                    <p>Welcome to the Scholars' Insights and News Articles Group (SINAG). We are the voice of PUP Cabiao
+                        Campus, dedicated to truth, integrity, and journalistic excellence.</p>
+                    <div class="hero-btns" style="display: flex; gap: 1rem;">
+                        <a href="#news" class="btn btn-primary">Read Latest</a>
+                        <a href="#" class="btn btn-secondary">Our Mission</a>
+                        <button id="admin-publish-btn" class="btn btn-primary" style="display: none; background-color: var(--accent);" onclick="openPublishModal()">PUBLISH</button>
+                        <span id="server-status" style="display: none; align-items: center; gap: 5px; font-size: 0.75rem; color: #666; font-weight: 600;">
+                            <span style="width: 8px; height: 8px; border-radius: 50%; background: #ccc; display: inline-block;"></span>
+                            Checking Connection...
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured News Section -->
+        <section id="news" class="section-padding">
+            <div class="container">
+                <div
+                    style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: var(--space-md);">
+                    <div>
+                        <span
+                            style="color: var(--primary); font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;">The
+                            Headlines</span>
+                        <h2 style="font-size: 2.5rem; margin-top: 0.5rem;">Latest Articles</h2>
+                    </div>
+                    <a href="javascript:void(0)" onclick="openAllArticlesModal()"
+                        style="color: var(--primary); font-weight: 600; text-transform: uppercase; font-size: 0.8rem; border-bottom: 2px solid var(--primary); padding-bottom: 4px;">View
+                        All News</a>
+                </div>
+
+                <div class="news-grid">
+                    <!-- Article 1: Valentine's Day Special -->
+                    <article class="article-card animate-up" style="animation-delay: 0.1s;"
+                        onclick="openArticle('valentines')">
+                        <div class="article-image">
+                            <img src="Assets/VALENTINES FRONT.jpg" alt="Valentine's Day Celebration">
+                        </div>
+                        <div class="article-info">
+                            <span class="article-meta">Highlights • February 14</span>
+                            <h3>𝗛𝗜𝗚𝗛𝗟𝗜𝗚𝗛𝗧𝗦 | 𝗩𝗮𝗹𝗲𝗻𝘁𝗶𝗻𝗲’𝘀 𝗗𝗮𝘆 𝗖𝗲𝗹𝗲𝗯𝗿𝗮𝘁𝗶𝗼𝗻 𝗼𝗳
+                                𝗣𝗨𝗣𝗶𝗮𝗻𝘀</h3>
+                            <p>Captivating booths and color-coded shirts adorned the hallways of the Polytechnic
+                                University of the Philippines (PUP) — Cabiao Campus as PUPians celebrated Valentine’s
+                                Day...</p>
+                            <a href="javascript:void(0)" class="read-more-btn">Read More →</a>
+                            <div class="admin-actions">
+                                <button class="edit-article-btn" onclick="event.stopPropagation(); initEdit('valentines')">Edit</button>
+                                <button class="delete-article-btn" onclick="event.stopPropagation(); initDelete('valentines')">Delete</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Article 2: Balik Sinta 2026 -->
+                    <article class="article-card animate-up" style="animation-delay: 0.2s;"
+                        onclick="openArticle('balik-sinta')">
+                        <div class="article-image">
+                            <img src="Assets/BALIK SINTA FRONT.jpg" alt="Balik Sinta 2026">
+                        </div>
+                        <div class="article-info">
+                            <span class="article-meta">News • February 10, 2026</span>
+                            <h3>BALIK SINTA 2026</h3>
+                            <p>The Polytechnic University of the Philippines Cabiao Campus proudly opened its program
+                                with a meaningful sequence of activities...</p>
+                            <a href="javascript:void(0)" class="read-more-btn">Read More →</a>
+                            <div class="admin-actions">
+                                <button class="edit-article-btn" onclick="event.stopPropagation(); initEdit('balik-sinta')">Edit</button>
+                                <button class="delete-article-btn" onclick="event.stopPropagation(); initDelete('balik-sinta')">Delete</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Article 3: Linis Sinta 2026 -->
+                    <article class="article-card animate-up" style="animation-delay: 0.3s;"
+                        onclick="openArticle('linis-sinta')">
+                        <div class="article-image">
+                            <img src="Assets/LINIS SINTA FRONT.jpg" alt="Linis Sinta 2026">
+                        </div>
+                        <div class="article-info">
+                            <span class="article-meta">News • February 5, 2026</span>
+                            <h3>LINIS SINTA 2026</h3>
+                            <p>The Polytechnic University of the Philippines (PUP) Cabiao Campus successfully carried
+                                out its Linis Sinta 2026 activity...</p>
+                            <a href="javascript:void(0)" class="read-more-btn">Read More →</a>
+                            <div class="admin-actions">
+                                <button class="edit-article-btn" onclick="event.stopPropagation(); initEdit('linis-sinta')">Edit</button>
+                                <button class="delete-article-btn" onclick="event.stopPropagation(); initDelete('linis-sinta')">Delete</button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section class="section-padding"
+            style="background: #fdf2ed; border-top: 1px solid #eeeeee; border-bottom: 1px solid #eeeeee;">
+            <div class="container" style="text-align: center; max-width: 700px;">
+                <h2 style="font-size: 2.22rem; margin-bottom: 1.5rem; color: #000;">Be Part of the Story</h2>
+                <p style="margin-bottom: 2.5rem; color: #444;">Are you a storyteller, a photographer, or a
+                    truth-seeker? Join SINAG and help us shed light on the issues that matter to the PUP Cabiao
+                    community.</p>
+                <a href="#" class="btn btn-primary">Apply Now</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-brand" style="flex: 1; min-width: 300px;">
+                <div class="footer-logo-group" style="margin-bottom: 2rem;">
+                    <img src="Assets/SINAG LOGO.png" alt="SINAG Logo" class="sinag-logo" style="height: 50px;">
+                    <div class="brand-info">
+                        <h4 style="color: var(--primary); margin: 0;">SINAG</h4>
+                        <span style="font-size: 0.7rem;">Official Publication of PUP Cabiao</span>
+                    </div>
+                </div>
+                <p style="color: #555; font-size: 0.9rem; max-width: 400px;">Scholars' Insights and News
+                    Articles Group. Committed to transparent, ethical, and impactful journalism since its inception.</p>
+            </div>
+
+            <div style="display: flex; gap: var(--space-lg);">
+                <div>
+                    <h4
+                        style="margin-bottom: 1.5rem; font-size: 0.9rem; letter-spacing: 0.1em; color: var(--secondary);">
+                        Quick Links</h4>
+                    <ul style="display: flex; flex-direction: column; gap: 0.8rem; font-size: 0.9rem; color: #333;">
+                        <li><a href="#">Articles</a></li>
+                        <li><a href="#">Editorial Board</a></li>
+                        <li><a href="javascript:void(0)" onclick="openAllPhotosModal()">Photo Gallery</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4
+                        style="margin-bottom: 1.5rem; font-size: 0.9rem; letter-spacing: 0.1em; color: var(--secondary);">
+                        Follow Us</h4>
+                    <ul style="display: flex; flex-direction: column; gap: 0.8rem; font-size: 0.9rem; color: #333;">
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a id="admin-login-link" href="javascript:void(0)" onclick="openLoginModal()" style="opacity: 0.6; font-size: 0.8rem; margin-top: 1rem; display: block;">Admin</a></li>
+                        <li><a id="admin-logout-link" href="javascript:void(0)" onclick="handleLogout()" style="display: none; opacity: 0.6; font-size: 0.8rem; margin-top: 0.5rem;">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container"
+            style="margin-top: var(--space-lg); padding-top: var(--space-md); border-top: 1px solid #eeeeee; text-align: center; font-size: 0.8rem; color: #555;">
+            <p>&copy; 2026 SINAG - Polytechnic University of the Philippines, Cabiao Campus. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Article Modal -->
+    <div id="article-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeArticle()">&times;</span>
+
+            <div class="gallery-container">
+                <button class="gallery-nav prev" onclick="changeSlide(-1)">&#10094;</button>
+                <div class="gallery-slide">
+                    <img id="gallery-img" src="Assets/VALENTINES FRONT.jpg" alt="Valentine's Gallery">
+                </div>
+                <button class="gallery-nav next" onclick="changeSlide(1)">&#10095;</button>
+            </div>
+
+            <div class="modal-article-body">
+                <span id="modal-meta" class="article-meta"></span>
+                <h2 id="modal-title"></h2>
+                <div id="modal-body" class="article-full-text">
+                    <!-- Dynamic Content -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Admin Login Modal -->
+    <div id="login-modal" class="modal">
+        <div class="modal-content auth-modal">
+            <span class="close-modal" onclick="closeLoginModal()">&times;</span>
+            <div class="modal-body-padding">
+                <h2 style="color: var(--primary); margin-bottom: 1.5rem;">Admin Login</h2>
+                <form id="login-form" onsubmit="handleLogin(event)">
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" required placeholder="Enter username">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" required placeholder="Enter password">
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Publish Modal -->
+    <div id="publish-modal" class="modal">
+        <div class="modal-content auth-modal">
+            <span class="close-modal" onclick="closePublishModal()">&times;</span>
+            <div class="modal-body-padding">
+                <h2 style="color: var(--primary); margin-bottom: 1.5rem;">Publish Article</h2>
+                <form id="publish-form" onsubmit="handlePublish(event)">
+                    <div class="form-group">
+                        <label for="p-headline">Headline</label>
+                        <input type="text" id="p-headline" required placeholder="Enter headline">
+                    </div>
+                    <div class="form-group">
+                        <label>Photo</label>
+                        <div id="upload-area" class="upload-area" onclick="document.getElementById('p-image-file').click()">
+                            <div class="upload-icon">+</div>
+                            <p>Drag & Drop or Click to Upload Multiple Photos</p>
+                            <input type="file" id="p-image-file" hidden accept="image/*" multiple>
+                        </div>
+                        <div id="image-preview-grid" class="preview-grid" style="display: none; margin-top: 15px;">
+                            <!-- Previews will be injected here -->
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="p-caption">Caption/Intro</label>
+                        <textarea id="p-caption" required placeholder="Enter a brief intro..." rows="10" style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 4px; font-family: inherit;"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Publish News</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Delete Confirmation Modal -->
+    <div id="delete-modal" class="modal">
+        <div class="modal-content auth-modal">
+            <span class="close-modal" onclick="closeDeleteModal()">&times;</span>
+            <div class="modal-body-padding">
+                <h2 style="color: var(--accent); margin-bottom: 1.5rem;">Confirm Delete</h2>
+                <p style="margin-bottom: 1.5rem; font-size: 0.95rem;">Are you sure you want to delete this article? This action cannot be undone. Please enter the admin password to confirm.</p>
+                <form id="delete-form" onsubmit="handleDeleteConfirm(event)">
+                    <div class="form-group">
+                        <label for="delete-password">Admin Password</label>
+                        <input type="password" id="delete-password" required placeholder="Enter password">
+                    </div>
+                    <button type="submit" class="btn" style="width: 100%; margin-top: 1rem; background-color: var(--accent); color: white;">Confirm Deletion</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit Modal -->
+    <div id="edit-modal" class="modal">
+        <div class="modal-content auth-modal">
+            <span class="close-modal" onclick="closeEditModal()">&times;</span>
+            <div class="modal-body-padding">
+                <h2 style="color: var(--primary); margin-bottom: 1.5rem;">Edit Article</h2>
+                <form id="edit-form" onsubmit="handleEditSave(event)">
+                    <div class="form-group">
+                        <label for="e-headline">Headline</label>
+                        <input type="text" id="e-headline" required placeholder="Enter headline">
+                    </div>
+                    <div class="form-group">
+                        <label>Photos</label>
+                        <div id="edit-upload-area" class="upload-area" onclick="document.getElementById('e-image-file').click()">
+                            <div class="upload-icon">+</div>
+                            <p>Drag & Drop or Click to Update Photos</p>
+                            <input type="file" id="e-image-file" hidden accept="image/*" multiple>
+                        </div>
+                        <div id="edit-preview-grid" class="preview-grid" style="display: none; margin-top: 15px;">
+                            <!-- Previews will be injected here -->
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="e-caption">Caption</label>
+                        <textarea id="e-caption" required placeholder="Enter article caption" rows="10"></textarea>
+                    </div>
+                    <button type="submit" class="btn" style="width: 100%; margin-top: 1rem; background-color: var(--primary); color: white;">Save Changes</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- All Articles Modal -->
+    <div id="all-articles-modal" class="modal">
+        <div class="modal-content" style="max-width: 1100px;">
+            <span class="close-modal" onclick="closeAllArticlesModal()">&times;</span>
+            <div class="modal-body-padding">
+                <h2 style="color: var(--primary); margin-bottom: 2rem; border-bottom: 2px solid #eee; padding-bottom: 1rem;">All News & Articles</h2>
+                <div id="all-articles-grid" class="news-grid" style="margin-top: 2rem;">
+                    <!-- All articles will be injected here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- All Photos Modal -->
+    <div id="all-photos-modal" class="modal">
+        <div class="modal-content" style="max-width: 1200px;">
+            <span class="close-modal" onclick="closeAllPhotosModal()">&times;</span>
+            <div class="modal-body-padding">
+                <h2 style="color: var(--primary); margin-bottom: 2rem; border-bottom: 2px solid #eee; padding-bottom: 1rem;">Photo Gallery</h2>
+                <div id="all-photos-grid" class="photo-gallery-grid">
+                    <!-- All article photos will be injected here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

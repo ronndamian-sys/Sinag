@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SINAG | Scholars' Insights and News Articles Group</title>
+    <meta name="description"
+        content="The official publication of Polytechnic University of the Philippines - Cabiao Campus. Providing insights and news for the academic community.">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="nav">
+            <div class="auth-btns">
+                <a href="#" class="btn-link">Sign in</a>
+                <a href="#" class="btn btn-primary" style="padding: 0.6rem 1.2rem; font-size: 0.75rem;">Sign up</a>
+            </div>
+
+            <div class="logo-group">
+                <img src="Assets/PUP LOGO.png" alt="PUP Logo" class="pup-logo">
+                <img src="Assets/SINAG LOGO.png" alt="SINAG Logo" class="sinag-logo">
+                <div class="brand-info">
+                    <h1>Scholars' Insights and News Articles Group</h1>
+                    <span>Polytechnic University of the Philippines - Cabiao Campus</span>
+                </div>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">Articles</a></li>
+                <li><a href="#">Editorial</a></li>
+                <li><a href="#">Literary</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content animate-up">
+                    <span>Official Publication</span>
+                    <h2>Light of Knowledge, Spark of Truth.</h2>
+                    <p>Welcome to the Scholars' Insights and News Articles Group (SINAG). We are the voice of PUP Cabiao
+                        Campus, dedicated to truth, integrity, and journalistic excellence.</p>
+                    <div class="hero-btns" style="display: flex; gap: 1rem;">
+                        <a href="#news" class="btn btn-primary">Read Latest</a>
+                        <a href="#" class="btn" style="border: 1px solid var(--glass-border);">Our Mission</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured News Section -->
+        <section id="news" class="section-padding">
+            <div class="container">
+                <div
+                    style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: var(--space-md);">
+                    <div>
+                        <span
+                            style="color: var(--primary); font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;">The
+                            Headlines</span>
+                        <h2 style="font-size: 2.5rem; margin-top: 0.5rem;">Latest Articles</h2>
+                    </div>
+                    <a href="#"
+                        style="color: var(--primary); font-weight: 600; text-transform: uppercase; font-size: 0.8rem; border-bottom: 2px solid var(--primary); padding-bottom: 4px;">View
+                        All News</a>
+                </div>
+
+                <div class="news-grid">
+                    <!-- Article 1 -->
+                    <article class="article-card animate-up" style="animation-delay: 0.1s;">
+                        <div class="article-image">
+                            <!-- Placeholder image path, using generate_image if needed later -->
+                            <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&q=80&w=800"
+                                alt="News article cover">
+                        </div>
+                        <div class="article-info">
+                            <span class="article-meta">News • 2 Hours Ago</span>
+                            <h3>Expanding Horrizons: PUP Cabiao Welcomes New Academic Year</h3>
+                            <p>As the curtains rise for the new semester, PUP Cabiao Campus prepares for a milestone
+                                year of academic excellence and student development.</p>
+                            <a href="#"
+                                style="color: var(--primary); font-weight: 700; font-size: 0.9rem; text-transform: uppercase;">Read
+                                More →</a>
+                        </div>
+                    </article>
+
+                    <!-- Article 2 -->
+                    <article class="article-card animate-up" style="animation-delay: 0.2s;">
+                        <div class="article-image">
+                            <img src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?auto=format&fit=crop&q=80&w=800"
+                                alt="News article cover">
+                        </div>
+                        <div class="article-info">
+                            <span class="article-meta">Editorial • Yesterday</span>
+                            <h3>The Silent Revolution: Digitalization in Local Education</h3>
+                            <p>An in-depth look at how digital tools are reshaping the learning experience within the
+                                campus and beyond.</p>
+                            <a href="#"
+                                style="color: var(--primary); font-weight: 700; font-size: 0.9rem; text-transform: uppercase;">Read
+                                More →</a>
+                        </div>
+                    </article>
+
+                    <!-- Article 3 -->
+                    <article class="article-card animate-up" style="animation-delay: 0.3s;">
+                        <div class="article-image">
+                            <img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&q=80&w=800"
+                                alt="News article cover">
+                        </div>
+                        <div class="article-info">
+                            <span class="article-meta">Literary • 2 Days Ago</span>
+                            <h3>Echoes of the Cabiao Sun</h3>
+                            <p>A collection of verses reflecting the vibrant spirit and heritage of our local community
+                                and academic life.</p>
+                            <a href="#"
+                                style="color: var(--primary); font-weight: 700; font-size: 0.9rem; text-transform: uppercase;">Read
+                                More →</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section class="section-padding"
+            style="background: var(--dark-muted); border-top: 1px solid var(--glass-border); border-bottom: 1px solid var(--glass-border);">
+            <div class="container" style="text-align: center; max-width: 700px;">
+                <h2 style="font-size: 2.22rem; margin-bottom: 1.5rem;">Be Part of the Story</h2>
+                <p style="color: var(--light-muted); margin-bottom: 2.5rem;">Are you a storyteller, a photographer, or a
+                    truth-seeker? Join SINAG and help us shed light on the issues that matter to the PUP Cabiao
+                    community.</p>
+                <a href="#" class="btn btn-primary">Apply Now</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-brand" style="flex: 1; min-width: 300px;">
+                <div class="logo-group" style="margin-bottom: 2rem;">
+                    <img src="Assets/SINAG LOGO.png" alt="SINAG Logo" class="sinag-logo" style="height: 50px;">
+                    <div class="brand-info">
+                        <h4 style="color: var(--primary); margin: 0;">SINAG</h4>
+                        <span style="font-size: 0.7rem;">Official Publication of PUP Cabiao</span>
+                    </div>
+                </div>
+                <p style="color: var(--light-muted); font-size: 0.9rem; max-width: 400px;">Scholars' Insights and News
+                    Articles Group. Committed to transparent, ethical, and impactful journalism since its inception.</p>
+            </div>
+
+            <div style="display: flex; gap: var(--space-lg);">
+                <div>
+                    <h4
+                        style="margin-bottom: 1.5rem; font-size: 0.9rem; letter-spacing: 0.1em; color: var(--secondary);">
+                        Quick Links</h4>
+                    <ul
+                        style="display: flex; flex-direction: column; gap: 0.8rem; font-size: 0.9rem; color: var(--light-muted);">
+                        <li><a href="#">Articles</a></li>
+                        <li><a href="#">Editorial Board</a></li>
+                        <li><a href="#">Photo Gallery</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4
+                        style="margin-bottom: 1.5rem; font-size: 0.9rem; letter-spacing: 0.1em; color: var(--secondary);">
+                        Follow Us</h4>
+                    <ul
+                        style="display: flex; flex-direction: column; gap: 0.8rem; font-size: 0.9rem; color: var(--light-muted);">
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container"
+            style="margin-top: var(--space-lg); padding-top: var(--space-md); border-top: 1px solid var(--glass-border); text-align: center; font-size: 0.8rem; color: #555;">
+            <p>&copy; 2026 SINAG - Polytechnic University of the Philippines, Cabiao Campus. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
